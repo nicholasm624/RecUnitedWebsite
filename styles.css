@@ -33,7 +33,7 @@ nav {
 }
 
 .nav-logo { height: 50px; display: flex; align-items: center; text-decoration: none; }
-.logo-img { height: 100%; width: auto; object-fit: contain; }
+.logo-img { height: 90px; width: auto; object-fit: contain; }
 
 .nav-links { display: flex; gap: 12px; list-style: none; align-items: center; }
 .nav-item > a {
