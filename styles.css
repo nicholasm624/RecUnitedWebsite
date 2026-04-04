@@ -32,6 +32,11 @@ nav {
   display: flex; align-items: center; justify-content: space-between;
 }
 
+::selection {
+  background: #FF5515; /* Highlighting color (e.g., yellow) */
+  color: #000;         /* Text color during highlight */
+}
+
 .nav-logo { height: 50px; display: flex; align-items: center; text-decoration: none; }
 .logo-img { height: 90px; width: auto; object-fit: contain; }
 
