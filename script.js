@@ -1,3 +1,49 @@
+// ── Slideshow ──
+(function() {
+  const SLIDE_DURATION = 10000; // ms to hold each slide
+  const slides = document.querySelectorAll('.slide');
+  const progressFill = document.getElementById('slideshow-progress');
+  if (!slides.length || !progressFill) return;
+
+  let current = 0;
+  let startTime = null;
+  let rafId = null;
+
+  function goToNext() {
+    const prev = current;
+    current = (current + 1) % slides.length;
+
+    // The incoming slide starts at translateX(100%) (default) — animate it in
+    slides[prev].classList.add('exiting');
+    slides[prev].classList.remove('active');
+    slides[current].classList.add('active');
+
+    // After transition, clean up exiting class and reset its position
+    setTimeout(() => {
+      slides[prev].classList.remove('exiting');
+    }, 750);
+  }
+
+  function animateProgress(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const elapsed = timestamp - startTime;
+    const pct = Math.min((elapsed / SLIDE_DURATION) * 100, 100);
+    progressFill.style.transition = 'none';
+    progressFill.style.width = pct + '%';
+
+    if (elapsed >= SLIDE_DURATION) {
+      progressFill.style.width = '0%';
+      startTime = null;
+      goToNext();
+    }
+    rafId = requestAnimationFrame(animateProgress);
+  }
+
+  // Init: make first slide visible (no translateX)
+  slides[0].classList.add('active');
+  rafId = requestAnimationFrame(animateProgress);
+})();
+
 // ── FAQ Toggler ──
 function setupFaq() {
   const faqBtns = document.querySelectorAll('.faq-btn');

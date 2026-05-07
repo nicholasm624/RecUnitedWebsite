@@ -67,6 +67,61 @@ nav {
 .btn-outline { background: var(--white); color: var(--text); padding: 16px 36px; border-radius: 16px; font-weight: 900; font-size: 18px; text-decoration: none; border: var(--thick-border); box-shadow: var(--hard-shadow); transition: transform 0.1s, box-shadow 0.1s; text-transform: uppercase; }
 .btn-outline:hover { transform: translate(4px, 4px); box-shadow: 2px 2px 0px rgba(42,31,26,0.15); background: #eee; }
 
+/* SLIDESHOW */
+.slideshow-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: var(--thick-border);
+  background: var(--text);
+  height: 100vh;
+}
+.slideshow-track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  /* Transition removed from here so it snaps back to the right invisibly */
+}
+.slide.active {
+  transform: translateX(0);
+  /* Transition applies only while moving in */
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide.exiting {
+  transform: translateX(-100%);
+  /* Transition applies only while moving out */
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.slideshow-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.25);
+  z-index: 10;
+}
+.slideshow-progress-fill {
+  height: 100%;
+  background: var(--orange);
+  width: 0%;
+  transition: none;
+  border-right: 3px solid var(--orange-dark);
+}
+
 /* STATS */
 .stats-strip { background: var(--orange); border-top: var(--thick-border); border-bottom: var(--thick-border); }
 .stats-inner { display: flex; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
