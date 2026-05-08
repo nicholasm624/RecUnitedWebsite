@@ -265,6 +265,16 @@ function startDodgeball() {
     setTimeout(() => { if (ball.parentNode) ball.remove(); }, 2000);
   }, 350);
 }
+// ── Mobile Menu Toggler ──
+function setupMobileMenu() {
+  const btn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  if (btn && navLinks) {
+    btn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  }
+}
 
 // Initialize everything on DOM load
 document.addEventListener('DOMContentLoaded', () => {
@@ -272,4 +282,5 @@ document.addEventListener('DOMContentLoaded', () => {
   setupAvatars();
   setupSecret();
   setupDodgeball();
+  setupMobileMenu();
 });

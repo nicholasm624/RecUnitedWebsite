@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RecUnited — The Game Lives On</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
 <link href="styles.css" rel="stylesheet">
 </head>
@@ -22,11 +24,13 @@
   <a class="nav-logo" href="index.html">
     <img class="logo-img" src="RecUnited-logo-2.png" alt="RecUnited Logo" onerror="this.src='https://placehold.co/200x80/FF5515/FFFFFF?text=RecUnited&font=Montserrat'">
   </a>
+  <button class="mobile-menu-btn" aria-label="Toggle Menu">☰</button>
 
   <ul class="nav-links">
     <li class="nav-item"><a href="index" style="color:var(--orange);">Home</a></li>
     <li class="nav-item"><a href="about">About</a></li>
     <li class="nav-item"><a href="faq">FAQ</a></li>
+    <li class="nav-item"><a href="https://forum.recunited.net">Forum</a></li>
     <li class="nav-item">
       <a href="https://discord.gg/YjyBSMwTQD" target="_blank" class="nav-link-btn">Discord</a>
     </li>
@@ -38,8 +42,8 @@
 <!-- SLIDESHOW -->
 <div class="slideshow-wrap">
   <div class="slideshow-track" id="slideshow-track">
-    <div class="slide active"><img src="banana.jpg" alt="Slide 1"></div>
-    <div class="slide"><img src="RecUnited.jpg" alt="Slide 2"></div>
+    <div class="slide active"><img src="banana.jpg" alt="Slide 1" fetchpriority="high"></div>
+    <div class="slide"><img src="banana.jpg" alt="Slide 2" loading="lazy"></div>
     <div class="slide"><img src="banana.jpg" alt="Slide 3"></div>
   </div>
   <div class="slideshow-progress-bar">
@@ -49,11 +53,13 @@
     
 <div class="stats-strip">
   <div class="stats-inner">
-    <div class="stat-item"><span class="stat-n">170+</span><div class="stat-l">Discord Members</div></div>
+    <div class="stat-item"><span class="stat-n">40+</span><div class="stat-l">Discord Members</div></div>
     <div class="stat-item"><span class="stat-n">99%</span><div class="stat-l">Target Uptime</div></div>
     <div class="stat-item"><span class="stat-n">Free</span><div class="stat-l">No Subscriptions</div></div>
   </div>
 </div>
+
+<div class="avatar-strip"><div class="avatar-row" id="av-row"></div></div>
 
 <section id="features" class="section">
   <div class="section-inner">
@@ -102,6 +108,6 @@
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
