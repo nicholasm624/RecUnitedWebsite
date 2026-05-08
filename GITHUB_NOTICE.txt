@@ -1,0 +1,6 @@
+© 2026 RecUnited
+
+This GitHub repository contains protected website source code.
+You may not copy, modify, fork, redistribute, or reuse this website code without explicit written permission from RecUnited.
+
+Public visibility does NOT grant open-source rights.

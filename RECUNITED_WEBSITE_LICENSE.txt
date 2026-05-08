@@ -1,0 +1,45 @@
+RecUnited Website Protection License (RWPL) v1.0
+
+Copyright (c) 2026 RecUnited. All Rights Reserved.
+
+This license applies ONLY to the RecUnited website source code, website assets, frontend files, backend systems, APIs, stylesheets, scripts, databases, configuration files, and related website materials hosted on GitHub.
+
+1. Website Code Restrictions
+You are NOT allowed to:
+
+- Copy the website code
+- Modify the website code
+- Fork the website repository
+- Reupload the website files
+- Redistribute any part of the website
+- Use the website code in another project
+- Create derivative websites based on RecUnited
+- Sell or monetize copied versions
+- Mirror the website repository
+- Host modified copies of the website
+- Train AI systems using the website code or assets
+
+unless you have explicit written permission from RecUnited.
+
+2. GitHub Hosting Notice
+The website repository being visible on GitHub does NOT make it open source.
+
+Public visibility is for approved viewing, backup, or authorized collaboration purposes only.
+
+No permission is granted to use the website code simply because it is hosted on GitHub.
+
+3. No Unauthorized Website Use
+Any unauthorized use, copying, cloning, or redistribution of the RecUnited website is strictly prohibited.
+
+4. Ownership
+All website code, branding, logos, assets, and related materials remain the exclusive property of RecUnited.
+
+5. Enforcement
+RecUnited reserves the right to:
+- Remove access
+- Issue takedown requests
+- Report unauthorized copies
+- Pursue legal action where applicable
+
+6. Disclaimer
+The website and all related materials are provided "AS IS" without warranty of any kind.
