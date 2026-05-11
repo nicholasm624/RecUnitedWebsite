@@ -28,8 +28,83 @@
     opacity: 0.75;
     transform: scale(1.12);
   }
-  </style>
 
+  /* Topbar icons */
+  .topbar-links .icon-link svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--orange);
+    transition: fill 0.15s;
+  }
+  .topbar-links .icon-link:hover svg {
+    fill: white;
+  }
+
+  /* Nav Discord button icon */
+  .nav-link-btn.icon-link {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+  }
+  .nav-link-btn.icon-link svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--text);
+  }
+  .nav-link-btn.icon-link:hover svg {
+    fill: var(--text);
+  }
+
+  /* Footer icon links */
+  .footer-links .icon-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+  }
+  .footer-links .icon-link svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+    transition: fill 0.15s;
+  }
+  .footer-links .icon-link:hover {
+    opacity: 1;
+    background: var(--orange);
+    transform: scale(1.12);
+  }
+  .footer-links .icon-link:hover svg {
+    fill: white;
+  }
+
+  /* Tooltip for icon links */
+  .icon-link {
+    position: relative;
+  }
+  .icon-link::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--text);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .icon-link:hover::after {
+    opacity: 1;
+  }
+</style>
 <div class="topbar">
   <span>OFFICIAL REvIVAL PROJECT:</span>
   <strong>RecUnited</strong>
